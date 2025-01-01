@@ -6,7 +6,6 @@ const input = document.getElementById('collatz-input');
 const result = document.getElementById('result');
 const log = document.getElementById('log');
 
-// Create table from logs
 let currentTable = null;
 
 const originalLog = console.log;
@@ -27,7 +26,6 @@ console.log = function(message) {
         const [step, number, calculation] = message.split('|');
 
         if (step === "Step") {
-            // Create header row
             const headerRow = document.createElement('tr');
             [step, number, calculation].forEach(text => {
                 const th = document.createElement('th');
@@ -36,7 +34,6 @@ console.log = function(message) {
             });
             currentTable.appendChild(headerRow);
         } else {
-            // Create data row
             const row = document.createElement('tr');
             [step, number, calculation].forEach(text => {
                 const td = document.createElement('td');
@@ -49,9 +46,7 @@ console.log = function(message) {
 };
 
 input.addEventListener("keydown", function (event) {
-    // Check if the Enter key was pressed
     if (event.key === "Enter") {
-        // Clear previous logs
         log.innerHTML = '';
 
         const n = parseInt(input.value);
