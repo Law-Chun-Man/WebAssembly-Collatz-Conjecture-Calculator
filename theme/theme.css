@@ -77,16 +77,6 @@ input:focus {
     box-shadow: 0 0 5px var(--border-focus-color);
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
 table {
     width: 50%;
     border-collapse: collapse;
@@ -125,6 +115,24 @@ tr:nth-child(odd) {
 }
 
 #theme-toggle:hover {
+    opacity: 0.8;
+}
+
+#scrollButton{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    font-weight: bold;
+    padding: 5px 8px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background var(--transition-time), color var(--transition-time);
+}
+
+#scrollButton:hover {
     opacity: 0.8;
 }
 

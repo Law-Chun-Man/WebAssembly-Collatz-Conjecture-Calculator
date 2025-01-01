@@ -1,13 +1,16 @@
 /* tslint:disable */
 /* eslint-disable */
-export function collatz(n: number): number;
+export function collatz(n: string): string;
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly collatz: (a: number) => number;
+  readonly collatz: (a: number, b: number) => [number, number];
   readonly __wbindgen_export_0: WebAssembly.Table;
+  readonly __wbindgen_malloc: (a: number, b: number) => number;
+  readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
+  readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_start: () => void;
 }
 

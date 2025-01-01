@@ -55,11 +55,15 @@ input.addEventListener("keydown", function (event) {
             return;
         }
         try {
-            const iteration = collatz(n);
+            const iteration = collatz(input.value);
             result.textContent = `Steps used: ${iteration}`;
         } catch (e) {
             result.textContent = 'An error occurred. The number might be too large.';
         }
     }
+});
+
+document.getElementById('scrollButton').addEventListener('click', function () {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 });
 

@@ -7,23 +7,23 @@ extern "C" {
 }
 
 #[wasm_bindgen]
-pub fn collatz(n: u32) -> u32 {
+pub fn collatz(n: String) -> String {
     log("TABLE_START");
     log("Step|Number|Calculation");
-    let mut n = n;
-    let mut i = 0;
-    log(&format!("{}|{}|", i, n));
+    let mut n: u128 = n.trim().parse().unwrap_or(1);
+    let mut i: u128 = 0;
+    log(&format!("{}|{}|", i.to_string(), n.to_string()));
     while n != 1 {
         if n % 2 == 0 {
             n = n / 2;
             i += 1;
-            log(&format!("{}|{}|n/2", i, n));
+            log(&format!("{}|{}|n/2", i.to_string(), n.to_string()));
         } else {
             n = 3 * n + 1;
             i += 1;
-            log(&format!("{}|{}|3n+1", i, n));
+            log(&format!("{}|{}|3n+1", i.to_string(), n.to_string()));
         }
     }
     log("TABLE_END");
-    i
+    i.to_string()
 }
