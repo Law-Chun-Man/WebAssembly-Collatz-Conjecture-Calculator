@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebAssembly Collatz Conjecture 3n+1 Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=defice-width, initial-scale=1.0">
+        <link id="theme-stylesheet" rel="stylesheet" href="theme/theme.css">
+        <script src="theme/change_theme.js"></script>
+        <script type="module" src="wasm.js"></script>
+    </head>
+    <body>
+        <button id="theme-toggle"></button>
+        <div class="container">
+            <h1>WebAssembly Collatz Conjecture 3n+1 Calculator</h1>
+            <input type="number" id="collatz-input" placeholder="Enter a number">
+            <br><br>
+            <div id="result"></div>
+            <br>
+            <div id="log"></div>
+        </div>
+    </body>
+</html>
